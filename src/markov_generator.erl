@@ -94,9 +94,8 @@ handle_call({generate_chain, FirstWord, Length}, _From, State) ->
     NextWordFunction = fun markov_word:pick_next_word_after/1,
     Reply = generate(NextWordFunction, Length, [FirstWord]),
     {reply, Reply, State};
-handle_call({parse_text, Text}, _From, State) ->
-    [FirstWord | Words] = tokenize(Text),
-    load_words(FirstWord, Words),
+handle_call({parse_text, _Text}, _From, State) ->
+    % Fill in logic to tokenize and load words here
     {reply, ok, State}.
 
 %%--------------------------------------------------------------------
