@@ -27,8 +27,11 @@ Build
 
 Run
 ------
+To open up an instance of the Erlang shell with the application loaded, run
 
     $ rebar3 shell
+
+When all of the methods are filled in, we should be able to do a full run of the application in the shell.
 
 ```erlang
 > TwoCities = "It was the best of times, it was the worst of times, it was
